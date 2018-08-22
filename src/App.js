@@ -149,7 +149,7 @@ const AppStructure = (props) => {
         <Paper>
           <PaperHeader title="Object Flatten/Unflatten"/>
           <div style={styles.paperBlock}>
-            <h2>Code</h2>
+            <h2>Ingresa tu codigo en esta parte</h2>
             <TextField
               style={styles.textField}
               hintText="Paste the JavaScript object here"
