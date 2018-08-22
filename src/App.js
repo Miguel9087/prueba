@@ -32,15 +32,10 @@ const Util = (() => {
   const FlatRes = makeRes();
 
   const walker = (item, prop) => {
-    console.log('prop: ',prop);
-    console.log('item: ',item);
     if (Object(item) !== item) {
       FlatRes.setRes(prop, item);
-      console.log('prop del Object', prop);
-      console.log('item del Object: ',item);
     } else if (Array.isArray(item)) {
       let len = item.length, i;
-      console.log('valor de len: ', len);
       if (len === 0) {
         FlatRes.setRes(prop, []);
       } else {
@@ -50,9 +45,7 @@ const Util = (() => {
       }
     } else {
       for (var p in item) {
-        console.log('Valor de p1: ',p);
         walker(item[p], prop ? prop + "_" + p : p);
-        console.log('item: ',item);
       }
     }
   };
